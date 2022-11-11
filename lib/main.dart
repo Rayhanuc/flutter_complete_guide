@@ -20,8 +20,15 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   var _questionIndex = 0;
+  var _totalScore = 0;
 
-  void _answerQuestion() {
+  void _answerQuestion(int score) {
+    // var aBool = true;
+    // aBool = false;
+
+    // _totalScore = _totalScore + score;
+    _totalScore += score;
+
     var _questions;
     setState(() {
       _questionIndex = _questionIndex + 1;
@@ -39,15 +46,30 @@ class _MyAppState extends State<MyApp> {
     // Map
     {
       'questionText': 'What\'s your favorite color?',
-      'answers': ['Black', 'Red', 'Green', 'White'],
+      'answers': [
+        {'text': 'Black', 'score': 10},
+        {'text': 'Red', 'score': 5},
+        {'text': 'Green', 'score': 3},
+        {'text': 'White', 'score': 1}
+      ],
     },
     {
       'questionText': 'What\'s your favorite animal?',
-      'answers': ['Rabbit', 'Snake', 'Elephant', 'Lion'],
+      'answers': [
+        {'text': 'Rabbit', 'score': 4},
+        {'text': 'Snake', 'score': 6},
+        {'text': 'Elephant', 'score': 3},
+        {'text': 'Lion', 'score': 2}
+      ]
     },
     {
       'questionText': 'Who\'s your favorite instructor?',
-      'answers': ['Max 1', 'Max 2', 'Max 3', 'Max 4'],
+      'answers': [
+        {'text': 'Max 1', 'score': 1},
+        {'text': 'Max 2', 'score': 2},
+        {'text': 'Max 3', 'score': 3},
+        {'text': 'Max 4', 'score': 4}
+      ],
     },
   ];
 
